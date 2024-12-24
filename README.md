@@ -46,15 +46,19 @@ cd cartoonizer-gan
      ```bash
      python app.py
      ```
+   - Or alternatively, you can download the [App.exe](https://drive.google.com/drive/folders/1bZr6SH8wRIBLQpEAfLAOV9l-fl3hxn9W?usp=drive_link).
+
    - This will launch the PyQt-based graphical interface where users can:
      - Browse and select an image.
      - Generate a cartoonized version using the pre-trained model.
      - Save the generated cartoonized image.
 
+
 3. **Testing the Model Directly**  
    - Use the `main.ipynb` notebook to test the model on a custom image.
    - Replace the `test_image_path` with the path to your image in the notebook.
    - Run the cells to preprocess the image, generate the cartoonized version, and evaluate metrics (SSIM and PSNR).
+
 
 ### Project Structure
 
@@ -75,13 +79,14 @@ The repository is organized as follows:
 ├───Interface QT              # Directory for PyQt5-based application
 │   ├───executable            # Contains the compiled `.exe` file (if created)
 │   ├───gen_pic               # Directory for generated cartoonized images
-│   └───__pycache__           # Python cache files
+│   ├───__pycache__           # Python cache files
+│   ├───app.py                    # Main PyQt5 application script
+│   ├───cartoonizer_ui.py         # Python code generated from the UI design file
+│   └───Beta.ui                   # Qt Designer UI file for the application
+│
 ├───models_saved              # Directory for saved models
-│   ├───pix2pix_generator_model_with metrics.h5  # Pre-trained Pix2Pix model
+│   └───pix2pix_generator_model_with metrics.h5  # Pre-trained Pix2Pix model
 ├───main.ipynb                # Jupyter Notebook for training and testing the GAN
-├───app.py                    # Main PyQt5 application script
-├───cartoonizer_ui.py         # Python code generated from the UI design file
-├───Beta.ui                   # Qt Designer UI file for the application
 └───README.md                 # Project documentation
 ```
 
