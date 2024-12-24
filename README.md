@@ -105,7 +105,6 @@ To test the pre-trained model:
 1. Place your test images in the `image_to_test_model` directory.
 2. Open `main.ipynb` in Jupyter Notebook.
 3. Run the testing section to generate cartoonized versions of the images.
-4. The generated images will be saved in the `Interface QT/gen_pic` directory.
 
 ### Using the Graphical User Interface
 To use the PyQt5 interface:
