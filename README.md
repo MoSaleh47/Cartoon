@@ -30,8 +30,8 @@ pip install pillow==11.0.0
 
 ### Clone the Repository
 ```bash
-git clone https://github.com/your-repo/cartoonizer-gan.git
-cd cartoonizer-gan
+git clone hthttps://github.com/MoSaleh47/Cartoon.git
+cd Cartoon
 ```
 
 ### Usage
