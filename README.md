@@ -75,13 +75,14 @@ The repository is organized as follows:
 ├───Interface QT              # Directory for PyQt5-based application
 │   ├───executable            # Contains the compiled `.exe` file (if created)
 │   ├───gen_pic               # Directory for generated cartoonized images
-│   └───__pycache__           # Python cache files
+│   ├───__pycache__           # Python cache files
+│   ├───app.py                    # Main PyQt5 application script
+│   ├───cartoonizer_ui.py         # Python code generated from the UI design file
+│   └───Beta.ui                   # Qt Designer UI file for the application
+│
 ├───models_saved              # Directory for saved models
-│   ├───pix2pix_generator_model_with metrics.h5  # Pre-trained Pix2Pix model
+│   └───pix2pix_generator_model_with metrics.h5  # Pre-trained Pix2Pix model
 ├───main.ipynb                # Jupyter Notebook for training and testing the GAN
-├───app.py                    # Main PyQt5 application script
-├───cartoonizer_ui.py         # Python code generated from the UI design file
-├───Beta.ui                   # Qt Designer UI file for the application
 └───README.md                 # Project documentation
 ```
 
