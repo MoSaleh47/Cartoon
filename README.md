@@ -46,15 +46,19 @@ cd cartoonizer-gan
      ```bash
      python app.py
      ```
+   - Or alternatively, you can download the [App.exe](https://drive.google.com/drive/folders/1bZr6SH8wRIBLQpEAfLAOV9l-fl3hxn9W?usp=drive_link).
+
    - This will launch the PyQt-based graphical interface where users can:
      - Browse and select an image.
      - Generate a cartoonized version using the pre-trained model.
      - Save the generated cartoonized image.
 
+
 3. **Testing the Model Directly**  
    - Use the `main.ipynb` notebook to test the model on a custom image.
    - Replace the `test_image_path` with the path to your image in the notebook.
    - Run the cells to preprocess the image, generate the cartoonized version, and evaluate metrics (SSIM and PSNR).
+
 
 ### Project Structure
 
