@@ -18,14 +18,14 @@ class CartoonizerApp(QtWidgets.QMainWindow):
         # Connect buttons to respective functions
         self.ui.pushButton.clicked.connect(self.browse_image)
         self.ui.pushButton_2.clicked.connect(self.generate_cartoon)
-        self.ui.pushButton_3.clicked.connect(self.save_image)
+        # self.ui.pushButton_3.clicked.connect(self.save_image)
 
         # Attributes for storing paths and images
         self.image_path = None
         self.cartoonized_image = None
 
         # Load the pre-trained GAN model
-        self.model = tf.keras.models.load_model("../pix2pix_generator_model_with metrics.h5", compile=False)
+        self.model = tf.keras.models.load_model("pix2pix_generator_model_with metrics.h5", compile=False)
 
     def browse_image(self):
         # Open a file dialog to select an image
@@ -74,20 +74,20 @@ class CartoonizerApp(QtWidgets.QMainWindow):
 
 
 
-    def save_image(self):
-        if self.cartoonized_image is None:
-            QMessageBox.warning(self, "No Cartoonized Image", "Please generate a cartoonized image first!")
-            return
+    # def save_image(self):
+    #     if self.cartoonized_image is None:
+    #         QMessageBox.warning(self, "No Cartoonized Image", "Please generate a cartoonized image first!")
+    #         return
 
-        # Save the cartoonized image
-        file_name, _ = QFileDialog.getSaveFileName(self, "Save Image", "", "Images (*.png *.jpg *.jpeg)")
-        if file_name:
-            try:
-                # Use OpenCV to save the image
-                cv2.imwrite(file_name, cv2.cvtColor(self.cartoonized_image, cv2.COLOR_RGB2BGR))
-                QMessageBox.information(self, "Image Saved", f"Image saved to: {file_name}")
-            except Exception as e:
-                QMessageBox.critical(self, "Error", f"Failed to save image: {str(e)}")
+    #     # Save the cartoonized image
+    #     file_name, _ = QFileDialog.getSaveFileName(self, "Save Image", "", "Images (*.png *.jpg *.jpeg)")
+    #     if file_name:
+    #         try:
+    #             # Use OpenCV to save the image
+    #             cv2.imwrite(file_name, cv2.cvtColor(self.cartoonized_image, cv2.COLOR_RGB2BGR))
+    #             QMessageBox.information(self, "Image Saved", f"Image saved to: {file_name}")
+    #         except Exception as e:
+    #             QMessageBox.critical(self, "Error", f"Failed to save image: {str(e)}")
 
 
 
