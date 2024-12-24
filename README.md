@@ -14,6 +14,7 @@ This project implements a GAN-based cartoonizer that transforms real images into
 ### Prerequisites
 1. **Python 3.10.16 or higher** (Anaconda recommended)
 2. Required libraries (see below for version details)
+3. (Optional) You can choose to download the full dataset that we used to train our model [here](https://www.kaggle.com/datasets/trolukovich/food11-image-dataset).
 
 ### Install Required Libraries
 
