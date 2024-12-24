@@ -117,4 +117,3 @@ To use the PyQt5 interface:
 3. Use the interface to:
     * Browse: Select an image to cartoonize.
     * Generate: Generate a cartoonized version of the image.
-    * Save Cartoonized Image: Save the generated image to your local machine.
